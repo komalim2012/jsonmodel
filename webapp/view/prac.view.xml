@@ -1,0 +1,32 @@
+<mvc:View controllerName="ui5fiori.controller.prac"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Label id="lblIdname" text="{i18n>empName}"/>
+            <Input id="inptIdname" type="Text"  value="{EmployeeModel>/EmployeeDetails/0/Name}"  editable="true"/>
+            <Label id="lblIdid" text="{i18n>empId}"/>
+            <Input id="inptIdid" type="Number" value="{EmployeeModel>/EmployeeDetails/0/empId}"/>
+            <Label id="lblIdslry" text="{i18n>empSalary}"/>
+            <Input id="inptIdslry" type="Number" value="{EmployeeModel>/EmployeeDetails/0/Salary}"/>
+            <Label id="lblIdcntry" text="{i18n>slctCountry}"/> 
+            <ComboBox id="cmbIdcntry">
+            <items>
+                 <core:Item id="itmIdind" key="IND" text="India"/>
+                 <core:Item id="itnIdrus" key="RUS" text="Russia"/>
+                 <core:Item id="itmIdaus" key="AUS" text="Australia"/>
+            </items> 
+            </ComboBox>     
+            <Label id="lblIdcity" text="{i18n>slctCity}"/>
+            <Select id="slctIdcity" forceSelection="false">
+                <items>
+                   <core:Item id="itmIdh" key="H" text="Hyderabad"/>
+                   <core:Item id="itmIdm" key="M" text="Moscow"/>
+                   <core:Item id="itmIdc" key="C" text="Canberra"/>
+                </items>
+            </Select>  
+            <!-- <DatePicker id="_IDGenDatePicker" calendarWeekNumbering="ISO_8601" displayFormatType="" showFooter="false"/> -->
+            <DateTimePicker id="dtpId" minutesStep="1" secondsStep="1" showCurrentTimeButton="true" showTimezone="true" timezone="Hyderabad,India"  />
+        </content>
+    </Page>
+</mvc:View>
