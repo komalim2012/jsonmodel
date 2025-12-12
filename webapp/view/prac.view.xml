@@ -13,7 +13,7 @@
             <ComboBox id="cmbIdcntry">
             <items>
                  <core:Item id="itmIdind" key="IND" text="India"/>
-                 <core:Item id="itnIdrus" key="RUS" text="Russia"/>
+                 <core:Item id="itmIdrus" key="RUS" text="Russia"/>
                  <core:Item id="itmIdaus" key="AUS" text="Australia"/>
             </items> 
             </ComboBox>     
